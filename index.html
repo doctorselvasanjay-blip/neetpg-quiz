@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEET PG Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2c3e50; }
+    .question { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+    .option { 
+      display: block; 
+      margin: 5px 0; 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .option:hover { background: #f0f0f0; }
+    .correct { background: #c8f7c5 !important; }
+    .wrong { background: #f7c5c5 !important; }
+    .explanation { margin-top: 10px; font-style: italic; color: #444; }
+  </style>
+</head>
+<body>
+  <h1>NEET PG Quiz</h1>
+
+  <label for="difficulty">Choose Difficulty:</label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="moderate">Moderate</option>
+    <option value="hard">Hard</option>
+    <option value="clinical">Clinical</option>
+  </select>
+  <button onclick="loadQuestions()">Load Questions</button>
+
+  <div id="quiz"></div>
+
+  <script>
+    const questionBank = {
+      easy: [
+        { q: "Normal adult heart rate?", options: ["40-60 bpm","60-100 bpm","100-120 bpm","30-50 bpm"], answer: 1, explanation: "Normal adult resting heart rate is 60-100 bpm." },
+        { q: "Vitamin deficiency causing scurvy?", options: ["Vitamin A","Vitamin B12","Vitamin C","Vitamin D"], answer: 2, explanation: "Scurvy is due to Vitamin C deficiency." },
+        { q: "Universal blood donor group?", options: ["O+","O-","AB+","AB-"], answer: 1, explanation: "O negative is universal donor." },
+        { q: "Which organ produces insulin?", options: ["Liver","Pancreas","Kidney","Spleen"], answer: 1, explanation: "Beta cells of pancreas secrete insulin." },
+        { q: "Most common cell in blood?", options: ["RBC","WBC","Platelets","Lymphocytes"], answer: 0, explanation: "RBCs are the most numerous cells in blood." },
+      ],
+      moderate: [
+        { q: "First-line drug for absence seizures?", options: ["Phenytoin","Valproate","Ethosuximide","Carbamazepine"], answer: 2, explanation: "Ethosuximide is DOC for absence seizures." },
+        { q: "MC site of gastric ulcer?", options: ["Fundus","Body","Antrum","Cardia"], answer: 2, explanation: "Most gastric ulcers occur in antrum." },
+        { q: "Drug causing gingival hyperplasia?", options: ["Phenytoin","Valproate","Lithium","Ethosuximide"], answer: 0, explanation: "Phenytoin causes gingival hyperplasia." },
+        { q: "MC cause of meningitis in adults?", options: ["E.coli","S. pneumoniae","Listeria","Klebsiella"], answer: 1, explanation: "Streptococcus pneumoniae is most common in adults." },
+        { q: "Earliest cranial nerve affected by raised ICP?", options: ["CN II","CN III","CN IV","CN VI"], answer: 3, explanation: "Abducens nerve (CN VI) is affected first due to long intracranial course." },
+      ],
+      hard: [
+        { q: "Thumb sign on lateral neck X-ray is seen in?", options: ["Croup","Epiglottitis","Tonsillitis","Retropharyngeal abscess"], answer: 1, explanation: "Epiglottitis → swollen epiglottis = thumb sign." },
+        { q: "Rathke’s pouch develops into?", options: ["Posterior pituitary","Anterior pituitary","Pineal gland","Thyroid"], answer: 1, explanation: "Rathke’s pouch gives rise to anterior pituitary." },
+        { q: "MC site of berry aneurysm?", options: ["MCA bifurcation","ACA–ACom junction","Basilar tip","PICA"], answer: 1, explanation: "Most common site is junction of ACA and anterior communicating artery." },
+        { q: "HLA-B27 is associated with?", options: ["SLE","Rheumatoid arthritis","Ankylosing spondylitis","Dermatomyositis"], answer: 2, explanation: "HLA-B27 is strongly associated with ankylosing spondylitis." },
+        { q: "MC cause of Addison’s disease worldwide?", options: ["Autoimmune","TB","Fungal","Metastasis"], answer: 1, explanation: "Tuberculosis is the most common cause worldwide." },
+      ],
+      clinical: [
+        { q: "50yo smoker with painless hematuria. Likely diagnosis?", options: ["Renal stone","Bladder cancer","UTI","GN"], answer: 1, explanation: "Classic presentation of bladder cancer." },
+        { q: "Child with fever, barking cough, stridor. Likely diagnosis?", options: ["Croup","Epiglottitis","Asthma","Bronchiolitis"], answer: 0, explanation: "Croup presents with barking cough and inspiratory stridor." },
+        { q: "Patient with moon face, buffalo hump, purple striae. Likely diagnosis?", options: ["Hypothyroidism","Cushing’s syndrome","Addison’s disease","PCOD"], answer: 1, explanation: "Typical features of Cushing’s syndrome due to cortisol excess." },
+        { q: "Patient with severe chest pain radiating to left arm, sweating. Next step?", options: ["Give antacids","Do ECG","Endoscopy","Ultrasound"], answer: 1, explanation: "In suspected MI, ECG is the first immediate investigation." },
+        { q: "60yo with progressive memory loss, disorientation. Likely diagnosis?", options: ["Parkinson’s","Alzheimer’s","Depression","Epilepsy"], answer: 1, explanation: "Classic case of Alzheimer’s dementia." },
+      ]
+    };
+
+    function loadQuestions() {
+      const diff = document.getElementById("difficulty").value;
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.innerHTML = "";
+
+      const questions = [...questionBank[diff]];
+      if (questions.length === 0) {
+        quizDiv.innerHTML = "<p>No questions available for this category yet.</p>";
+        return;
+      }
+
+      const selected = [];
+      while (selected.length < Math.min(5, questions.length)) {
+        const randIndex = Math.floor(Math.random() * questions.length);
+        selected.push(questions.splice(randIndex, 1)[0]);
+      }
+
+      selected.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.classList.add("question");
+        qDiv.innerHTML = `<h3>Q${index + 1}. ${q.q}</h3>`;
+        
+        q.options.forEach((opt, i) => {
+          const btn = document.createElement("div");
+          btn.classList.add("option");
+          btn.textContent = opt;
+          btn.onclick = () => {
+            if (i === q.answer) {
+              btn.classList.add("correct");
+            } else {
+              btn.classList.add("wrong");
+            }
+            const exp = document.createElement("div");
+            exp.classList.add("explanation");
+            exp.textContent = "Explanation: " + q.explanation;
+            qDiv.appendChild(exp);
+            qDiv.querySelectorAll(".option").forEach(o => o.style.pointerEvents = "none");
+          };
+          qDiv.appendChild(btn);
+        });
+
+        quizDiv.appendChild(qDiv);
+      });
+    }
+  </script>
+</body>
+</html>
