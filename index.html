@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NEET PG Quiz</title>
+  <title>NEXT Mock Test</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background:#f9f9f9; }
-    h1 { text-align:center; }
+    body { font-family: Arial, sans-serif; margin: 20px; background:#f4f4f9; }
+    h1, h2 { text-align:center; }
     .question { margin:20px 0; padding:15px; background:#fff; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
     .options button { display:block; margin:8px 0; padding:10px; width:100%; border:none; border-radius:6px; cursor:pointer; }
     .options button:hover { background:#eee; }
@@ -13,135 +13,266 @@
     .wrong { background:#f7c5c5 !important; }
     .explanation { margin-top:10px; font-size:14px; color:#333; }
     #scoreBox { font-size:18px; font-weight:bold; margin-top:20px; text-align:center; }
+    #summary { display:none; padding:20px; background:#fff; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin-top:20px; }
     #retryBtn { display:none; margin:20px auto; padding:10px 20px; background:#007BFF; color:#fff; border:none; border-radius:6px; cursor:pointer; }
     #retryBtn:hover { background:#0056b3; }
+    #sectionSelect { text-align:center; margin:20px; }
+    #sectionSelect button { margin:10px; padding:10px 20px; border:none; border-radius:6px; cursor:pointer; background:#28a745; color:#fff; }
+    #sectionSelect button:hover { background:#1e7e34; }
   </style>
 </head>
 <body>
-  <h1>NEET PG Quiz</h1>
-  <label for="difficulty">Choose Difficulty: </label>
-  <select id="difficulty">
-    <option value="easy">Easy</option>
-    <option value="moderate">Moderate</option>
-    <option value="hard">Hard</option>
-    <option value="clinical">Clinical</option>
-  </select>
-  <button onclick="loadQuestions()">Load Questions</button>
-  
+  <h1>NEXT Pattern Mock Test</h1>
+
+  <div id="sectionSelect">
+    <h2>Select Subject</h2>
+    <button onclick="startTest('Medicine')">Medicine</button>
+    <button onclick="startTest('Surgery')">Surgery</button>
+    <button onclick="startTest('OBG')">OBG</button>
+    <button onclick="startTest('Pediatrics')">Pediatrics</button>
+    <button onclick="startTest('ENT')">ENT</button>
+    <button onclick="startTest('Ophthalmology')">Ophthalmology</button>
+  </div>
+
   <div id="quiz"></div>
   <div id="scoreBox"></div>
-  <button id="retryBtn" onclick="retryQuiz()">Retry Quiz</button>
+  <div id="summary"></div>
+  <button id="retryBtn" onclick="resetQuiz()">Take Another Test</button>
 
   <script>
-    const questionBank = {
-      easy: [
-        {
-          q: "Normal adult heart rate?",
-          options: ["40-60 bpm", "60-100 bpm", "100-120 bpm", "120-140 bpm"],
-          answer: 1,
-          explanation: "Normal adult resting heart rate is 60–100 bpm."
-        },
-        {
-          q: "What is the universal blood donor?",
-          options: ["O+", "O-", "AB+", "AB-"],
-          answer: 1,
-          explanation: "O negative is universal donor because it lacks A, B, and Rh antigens."
-        }
-      ],
-      moderate: [
-        {
-          q: "Which vitamin deficiency causes night blindness?",
-          options: ["Vitamin A", "Vitamin B1", "Vitamin C", "Vitamin D"],
-          answer: 0,
-          explanation: "Vitamin A deficiency leads to impaired dark adaptation → night blindness."
-        }
-      ],
-      hard: [
-        {
-          q: "Most common cause of community acquired pneumonia?",
-          options: ["Streptococcus pneumoniae", "Klebsiella", "Mycoplasma", "Staph aureus"],
-          answer: 0,
-          explanation: "Streptococcus pneumoniae is the leading cause."
-        }
-      ],
-      clinical: [
-        {
-          q: "A 65-year-old male with smoking history presents with hematuria. Next best investigation?",
-          options: ["Ultrasound KUB", "Urine cytology", "CT Urography", "IVP"],
-          answer: 2,
-          explanation: "CT urography is investigation of choice in suspected urothelial cancer."
-        }
-      ]
-    };
+  // Global bank (loaded from questions.json)
+  let questionBank = {};
+  let score = 0, total = 0, currentSubject = "";
 
-    let score = 0;
-    let total = 0;
+  // Load questions.json (with cache-bust to avoid GitHub Pages caching)
+  async function loadBank() {
+    if (Object.keys(questionBank).length) return; // already loaded
+    const res = await fetch('questions.json?cb=' + Date.now());
+    if (!res.ok) {
+      alert('Could not load question bank (questions.json). Make sure it is in the repo root.');
+      return;
+    }
+    questionBank = await res.json();
+  }
 
-    function loadQuestions() {
-      score = 0;
-      document.getElementById("scoreBox").innerText = "";
-      document.getElementById("retryBtn").style.display = "none";
+  async function startTest(subject) {
+    await loadBank();
 
-      const diff = document.getElementById("difficulty").value;
-      const questions = [...questionBank[diff]];
-      total = questions.length;
+    currentSubject = subject;
+    document.getElementById("sectionSelect").style.display = "none";
+    loadQuestions(subject);
+  }
 
-      const quizDiv = document.getElementById("quiz");
-      quizDiv.innerHTML = "";
+  function loadQuestions(subject) {
+    const quizDiv = document.getElementById("quiz");
+    quizDiv.innerHTML = "";
+    document.getElementById("scoreBox").innerHTML = "";
+    document.getElementById("summary").style.display = "none";
+    document.getElementById("retryBtn").style.display = "none";
+    score = 0;
 
-      questions.forEach((q, idx) => {
-        const qDiv = document.createElement("div");
-        qDiv.className = "question";
+    let questions;
+    if (subject === "Full Mock") {
+      // Mix from all available subjects
+      const all = Object.values(questionBank).flat();
+      if (!all.length) {
+        quizDiv.innerHTML = "<p>No questions available yet. Upload/update questions.json.</p>";
+        return;
+      }
+      questions = all;
+    } else {
+      questions = questionBank[subject] || [];
+      if (!questions.length) {
+        quizDiv.innerHTML = `<p>No questions available for <b>${subject}</b> yet. We’ll add them next.</p>`;
+        return;
+      }
+    }
 
-        const qText = document.createElement("p");
-        qText.innerText = `Q${idx+1}. ${q.q}`;
-        qDiv.appendChild(qText);
+    // Shuffle (Fisher–Yates)
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
 
-        const optDiv = document.createElement("div");
-        optDiv.className = "options";
+    // Pick first 5 unique questions
+    const selected = questions.slice(0, 5);
+    total = selected.length;
 
-        q.options.forEach((opt, i) => {
-          const btn = document.createElement("button");
-          btn.innerText = opt;
-          btn.onclick = () => checkAnswer(btn, i, q.answer, q.explanation, qDiv);
-          optDiv.appendChild(btn);
-        });
+    selected.forEach((qObj, i) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.innerHTML = `<b>Q${i+1}. ${qObj.q}</b>`;
 
-        qDiv.appendChild(optDiv);
-        quizDiv.appendChild(qDiv);
+      const optDiv = document.createElement("div");
+      optDiv.className = "options";
+
+      qObj.options.forEach((opt, j) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => {
+          if (!btn.classList.contains("correct") && !btn.classList.contains("wrong")) {
+            if (j === qObj.answer) {
+              btn.classList.add("correct");
+              score++;
+            } else {
+              btn.classList.add("wrong");
+            }
+            const exp = document.createElement("div");
+            exp.className = "explanation";
+            exp.textContent = qObj.explanation;
+            qDiv.appendChild(exp);
+            showScore();
+          }
+        };
+        optDiv.appendChild(btn);
       });
+
+      qDiv.appendChild(optDiv);
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function showScore() {
+    document.getElementById("scoreBox").innerHTML = `Score: ${score}/${total}`;
+    if (document.querySelectorAll(".explanation").length === total) {
+      showSummary();
     }
+  }
 
-    function checkAnswer(button, chosen, correct, explanation, qDiv) {
-      const buttons = qDiv.querySelectorAll("button");
-      buttons.forEach(b => b.disabled = true);
+  function showSummary() {
+    const summaryDiv = document.getElementById("summary");
+    summaryDiv.style.display = "block";
+    summaryDiv.innerHTML = `<h2>Result Summary</h2>
+      <p>Subject: <b>${currentSubject}</b></p>
+      <p>Score: <b>${score} / ${total}</b></p>`;
+    document.getElementById("retryBtn").style.display = "block";
+  }
 
-      if(chosen === correct) {
-        button.classList.add("correct");
-        score++;
-      } else {
-        button.classList.add("wrong");
-        buttons[correct].classList.add("correct");
+  function resetQuiz() {
+    document.getElementById("quiz").innerHTML = "";
+    document.getElementById("scoreBox").innerHTML = "";
+    document.getElementById("summary").style.display = "none";
+    document.getElementById("retryBtn").style.display = "none";
+    document.getElementById("sectionSelect").style.display = "block";
+  }
+</script>
+<script>
+  // Global bank (loaded from questions.json)
+  let questionBank = {};
+  let score = 0, total = 0, currentSubject = "";
+
+  // Load questions.json (with cache-bust to avoid GitHub Pages caching)
+  async function loadBank() {
+    if (Object.keys(questionBank).length) return; // already loaded
+    const res = await fetch('questions.json?cb=' + Date.now());
+    if (!res.ok) {
+      alert('Could not load question bank (questions.json). Make sure it is in the repo root.');
+      return;
+    }
+    questionBank = await res.json();
+  }
+
+  async function startTest(subject) {
+    await loadBank();
+
+    currentSubject = subject;
+    document.getElementById("sectionSelect").style.display = "none";
+    loadQuestions(subject);
+  }
+
+  function loadQuestions(subject) {
+    const quizDiv = document.getElementById("quiz");
+    quizDiv.innerHTML = "";
+    document.getElementById("scoreBox").innerHTML = "";
+    document.getElementById("summary").style.display = "none";
+    document.getElementById("retryBtn").style.display = "none";
+    score = 0;
+
+    let questions;
+    if (subject === "Full Mock") {
+      // Mix from all available subjects
+      const all = Object.values(questionBank).flat();
+      if (!all.length) {
+        quizDiv.innerHTML = "<p>No questions available yet. Upload/update questions.json.</p>";
+        return;
       }
-
-      const exp = document.createElement("div");
-      exp.className = "explanation";
-      exp.innerText = "Explanation: " + explanation;
-      qDiv.appendChild(exp);
-
-      if(document.querySelectorAll(".question").length === document.querySelectorAll(".explanation").length) {
-        showScore();
+      questions = all;
+    } else {
+      questions = questionBank[subject] || [];
+      if (!questions.length) {
+        quizDiv.innerHTML = `<p>No questions available for <b>${subject}</b> yet. We’ll add them next.</p>`;
+        return;
       }
     }
 
-    function showScore() {
-      document.getElementById("scoreBox").innerText = `You scored ${score} / ${total}`;
-      document.getElementById("retryBtn").style.display = "block";
+    // Shuffle (Fisher–Yates)
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
     }
 
-    function retryQuiz() {
-      loadQuestions();
+    // Pick first 5 unique questions
+    const selected = questions.slice(0, 5);
+    total = selected.length;
+
+    selected.forEach((qObj, i) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.innerHTML = `<b>Q${i+1}. ${qObj.q}</b>`;
+
+      const optDiv = document.createElement("div");
+      optDiv.className = "options";
+
+      qObj.options.forEach((opt, j) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => {
+          if (!btn.classList.contains("correct") && !btn.classList.contains("wrong")) {
+            if (j === qObj.answer) {
+              btn.classList.add("correct");
+              score++;
+            } else {
+              btn.classList.add("wrong");
+            }
+            const exp = document.createElement("div");
+            exp.className = "explanation";
+            exp.textContent = qObj.explanation;
+            qDiv.appendChild(exp);
+            showScore();
+          }
+        };
+        optDiv.appendChild(btn);
+      });
+
+      qDiv.appendChild(optDiv);
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function showScore() {
+    document.getElementById("scoreBox").innerHTML = `Score: ${score}/${total}`;
+    if (document.querySelectorAll(".explanation").length === total) {
+      showSummary();
     }
-  </script>
+  }
+
+  function showSummary() {
+    const summaryDiv = document.getElementById("summary");
+    summaryDiv.style.display = "block";
+    summaryDiv.innerHTML = `<h2>Result Summary</h2>
+      <p>Subject: <b>${currentSubject}</b></p>
+      <p>Score: <b>${score} / ${total}</b></p>`;
+    document.getElementById("retryBtn").style.display = "block";
+  }
+
+  function resetQuiz() {
+    document.getElementById("quiz").innerHTML = "";
+    document.getElementById("scoreBox").innerHTML = "";
+    document.getElementById("summary").style.display = "none";
+    document.getElementById("retryBtn").style.display = "none";
+    document.getElementById("sectionSelect").style.display = "block";
+  }
+</script>
+
 </body>
 </html>
