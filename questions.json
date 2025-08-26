@@ -1,0 +1,229 @@
+{
+  "Medicine": [
+    {
+      "q": "Most common cause of community-acquired pneumonia in adults?",
+      "options": [
+        "Streptococcus pneumoniae",
+        "Klebsiella pneumoniae",
+        "Mycoplasma pneumoniae",
+        "Staphylococcus aureus"
+      ],
+      "answer": 0,
+      "explanation": "Streptococcus pneumoniae remains the leading cause of CAP in immunocompetent adults."
+    },
+    {
+      "q": "Best initial management step in diabetic ketoacidosis (DKA)?",
+      "options": [
+        "Start IV insulin bolus",
+        "Rapid IV isotonic saline",
+        "Give sodium bicarbonate",
+        "Start potassium infusion immediately"
+      ],
+      "answer": 1,
+      "explanation": "Volume resuscitation with isotonic saline is the first step; insulin and potassium follow based on labs."
+    },
+    {
+      "q": "Earliest ECG change in hyperkalemia?",
+      "options": [
+        "Peaked T waves",
+        "Widened QRS",
+        "Prolonged PR interval",
+        "Flattened P waves"
+      ],
+      "answer": 0,
+      "explanation": "Tall, peaked T waves are typically the earliest finding."
+    },
+    {
+      "q": "Which drug class reduces mortality in HFrEF?",
+      "options": [
+        "Loop diuretics",
+        "ACE inhibitors/ARNI",
+        "Nitrates",
+        "Digoxin"
+      ],
+      "answer": 1,
+      "explanation": "ACE inhibitors/ARNI, beta-blockers, and MRAs improve survival; diuretics and digoxin relieve symptoms."
+    },
+    {
+      "q": "Best reperfusion strategy for STEMI presenting within 90 minutes to PCI-capable center?",
+      "options": [
+        "Thrombolysis",
+        "Primary percutaneous coronary intervention",
+        "CABG",
+        "Medical therapy only"
+      ],
+      "answer": 1,
+      "explanation": "Primary PCI within recommended door-to-balloon time offers best outcomes when rapidly available."
+    },
+    {
+      "q": "Most specific test for rheumatoid arthritis?",
+      "options": [
+        "Rheumatoid factor",
+        "Anti-CCP antibodies",
+        "ANA",
+        "ESR"
+      ],
+      "answer": 1,
+      "explanation": "Anti-cyclic citrullinated peptide (anti-CCP) antibodies have high specificity for RA."
+    },
+    {
+      "q": "Nephrotic syndrome is defined by proteinuria exceeding:",
+      "options": [
+        "300 mg/day",
+        "1 g/day",
+        "3.5 g/day",
+        "10 g/day"
+      ],
+      "answer": 2,
+      "explanation": "Nephrotic-range proteinuria is >3.5 g/day with hypoalbuminemia and edema."
+    },
+    {
+      "q": "First-line bronchodilator in acute severe asthma exacerbation?",
+      "options": [
+        "Ipratropium inhaler alone",
+        "Nebulized salbutamol (albuterol)",
+        "Theophylline",
+        "Montelukast"
+      ],
+      "answer": 1,
+      "explanation": "Short-acting beta-2 agonists are first-line; anticholinergics and steroids are adjuncts."
+    },
+    {
+      "q": "In suspected infective endocarditis, the next best step before starting antibiotics?",
+      "options": [
+        "Start broad-spectrum antibiotics",
+        "Obtain 3 sets of blood cultures",
+        "Immediate TEE",
+        "Start anticoagulation"
+      ],
+      "answer": 1,
+      "explanation": "Blood cultures prior to antibiotics maximize yield for pathogen identification."
+    },
+    {
+      "q": "Most appropriate initial test for hypothyroidism?",
+      "options": [
+        "Free T4",
+        "TSH",
+        "Total T3",
+        "TRH stimulation test"
+      ],
+      "answer": 1,
+      "explanation": "TSH is the best screening test; free T4 helps classify severity."
+    },
+    {
+      "q": "Which finding suggests SIADH in hyponatremia?",
+      "options": [
+        "Hypervolemia with edema",
+        "Low urine osmolality <100 mOsm/kg",
+        "Euvolemia with high urine sodium",
+        "Hypernatremia"
+      ],
+      "answer": 2,
+      "explanation": "SIADH: euvolemic hyponatremia with inappropriately concentrated urine and high urine sodium."
+    },
+    {
+      "q": "Emergency temporizing therapy for life-threatening hyperkalemia with ECG changes?",
+      "options": [
+        "Insulin with glucose",
+        "Nebulized salbutamol",
+        "IV calcium gluconate",
+        "Furosemide"
+      ],
+      "answer": 2,
+      "explanation": "IV calcium stabilizes cardiac membranes; insulin/glucose and beta-agonists shift K+ intracellularly."
+    },
+    {
+      "q": "Which test is preferred to confirm H. pylori eradication after therapy?",
+      "options": [
+        "Serology (IgG)",
+        "Urea breath test",
+        "Endoscopic biopsy culture",
+        "Rapid urease test"
+      ],
+      "answer": 1,
+      "explanation": "Urea breath test or stool antigen test are preferred for confirming eradication; serology is not reliable post-treatment."
+    },
+    {
+      "q": "A patient with chronic liver disease has ascites with SAAG 1.5 g/dL. Interpretation?",
+      "options": [
+        "Non-portal hypertensive ascites",
+        "Portal hypertension-related ascites",
+        "Chylous ascites",
+        "Malignant ascites"
+      ],
+      "answer": 1,
+      "explanation": "SAAG ≥1.1 g/dL indicates portal hypertension as the cause of ascites."
+    },
+    {
+      "q": "Which enzyme is more specific for acute pancreatitis?",
+      "options": [
+        "Serum amylase",
+        "Serum lipase",
+        "AST",
+        "ALT"
+      ],
+      "answer": 1,
+      "explanation": "Serum lipase rises earlier and is more specific for pancreatitis than amylase."
+    },
+    {
+      "q": "Investigation of choice for evaluating a solitary thyroid nodule?",
+      "options": [
+        "Radionuclide scan",
+        "Ultrasound-guided FNAC",
+        "Serum calcitonin",
+        "MRI neck"
+      ],
+      "answer": 1,
+      "explanation": "Ultrasound-guided FNAC provides cytology for diagnosis; scan is reserved when TSH is suppressed."
+    },
+    {
+      "q": "Best initial test to screen for diabetes mellitus in an asymptomatic adult?",
+      "options": [
+        "Random plasma glucose",
+        "Fasting plasma glucose",
+        "Oral glucose tolerance test",
+        "Urine glucose"
+      ],
+      "answer": 1,
+      "explanation": "Fasting plasma glucose or HbA1c are standard screening tests; OGTT is diagnostic in equivocal cases."
+    },
+    {
+      "q": "Treatment that prevents isoniazid-induced peripheral neuropathy?",
+      "options": [
+        "Folic acid",
+        "Vitamin B12",
+        "Pyridoxine (Vitamin B6)",
+        "Vitamin C"
+      ],
+      "answer": 2,
+      "explanation": "Pyridoxine supplementation prevents INH-induced neuropathy."
+    },
+    {
+      "q": "Which anticoagulant is preferred in pregnancy for VTE?",
+      "options": [
+        "Warfarin",
+        "Unfractionated heparin",
+        "Low-molecular-weight heparin",
+        "Dabigatran"
+      ],
+      "answer": 2,
+      "explanation": "LMWH is preferred due to safety and predictable dosing; warfarin is teratogenic."
+    },
+    {
+      "q": "Most appropriate next step in suspected PE in a hemodynamically stable patient with high clinical probability?",
+      "options": [
+        "CXR",
+        "CT pulmonary angiography",
+        "Transthoracic echo",
+        "V/Q scan is always first"
+      ],
+      "answer": 1,
+      "explanation": "CTPA is the investigation of choice in stable patients with adequate renal function."
+    }
+  ],
+  "Surgery": [],
+  "OBG": [],
+  "Pediatrics": [],
+  "ENT": [],
+  "Ophthalmology": []
+}
