@@ -1,62 +1,602 @@
 [
   {
-    "q": "Most common cause of community-acquired pneumonia in immunocompetent adults?",
+    "q": "Most common cause of community-acquired pneumonia in adults?",
     "options": ["Streptococcus pneumoniae", "Klebsiella pneumoniae", "Mycoplasma pneumoniae", "Staphylococcus aureus"],
     "answer": 0,
-    "explanation": "Streptococcus pneumoniae remains the leading cause of CAP in otherwise healthy adults."
+    "explanation": "Streptococcus pneumoniae remains the leading cause of CAP."
   },
   {
-    "q": "Best initial management step in diabetic ketoacidosis (DKA)?",
-    "options": ["Start IV insulin bolus immediately", "Rapid IV isotonic saline infusion", "Give sodium bicarbonate routinely", "Start potassium infusion immediately"],
+    "q": "First-line treatment for hypertension in diabetes mellitus?",
+    "options": ["Thiazide diuretics", "ACE inhibitors", "Beta-blockers", "Calcium channel blockers"],
     "answer": 1,
-    "explanation": "Volume resuscitation with isotonic saline is the first step; insulin and potassium are added after labs and partial fluid replacement."
+    "explanation": "ACE inhibitors/ARBs are preferred because they protect the kidneys."
   },
   {
-    "q": "Earliest ECG change in hyperkalemia is typically:",
-    "options": ["Tall peaked T waves", "Widened QRS", "Prolonged PR interval", "Flattened P waves"],
+    "q": "Earliest ECG change in hyperkalemia?",
+    "options": ["Peaked T waves", "Widened QRS", "Flattened P waves", "Prolonged QT"],
     "answer": 0,
-    "explanation": "Tall, peaked T waves usually appear first as serum potassium rises."
+    "explanation": "Tall, peaked T waves are the earliest change."
   },
   {
-    "q": "Which therapy improves survival in HFrEF (reduced EF)?",
-    "options": ["Loop diuretics", "ACE inhibitor or ARNI", "Nitrates alone", "Digoxin"],
+    "q": "Best initial management in diabetic ketoacidosis (DKA)?",
+    "options": ["IV insulin", "IV fluids (normal saline)", "IV bicarbonate", "IV potassium"],
     "answer": 1,
-    "explanation": "ACE inhibitors (or ARNI), evidence-based beta-blockers, and MRAs improve survival; loop diuretics and digoxin mainly relieve symptoms."
+    "explanation": "Volume resuscitation with normal saline is the first step."
   },
   {
-    "q": "Best reperfusion strategy for a STEMI patient at a PCI-capable center within guideline time windows:",
-    "options": ["Thrombolysis", "Primary PCI", "CABG", "Medical therapy only"],
-    "answer": 1,
-    "explanation": "Primary percutaneous coronary intervention within door-to-balloon time offers superior outcomes when rapidly available."
-  },
-  {
-    "q": "Most specific serologic test for rheumatoid arthritis:",
-    "options": ["Rheumatoid factor", "Anti-CCP antibodies", "ANA", "ESR"],
-    "answer": 1,
-    "explanation": "Anti-cyclic citrullinated peptide (anti-CCP) antibodies have high specificity for RA."
+    "q": "Most specific antibody for rheumatoid arthritis?",
+    "options": ["ANA", "Rheumatoid factor", "Anti-CCP", "Anti-dsDNA"],
+    "answer": 2,
+    "explanation": "Anti-CCP antibodies are highly specific for RA."
   },
   {
     "q": "Nephrotic syndrome is defined by daily proteinuria greater than:",
     "options": ["300 mg", "1 g", "3.5 g", "10 g"],
     "answer": 2,
-    "explanation": "Nephrotic-range proteinuria is >3.5 g/day, typically with hypoalbuminemia and edema."
+    "explanation": "Nephrotic-range proteinuria is >3.5 g/day."
   },
   {
-    "q": "First-line bronchodilator in an acute severe asthma exacerbation:",
-    "options": ["Ipratropium alone", "Nebulized salbutamol (albuterol)", "Theophylline infusion", "Montelukast"],
-    "answer": 1,
-    "explanation": "Short-acting beta-2 agonists are first-line; ipratropium and systemic steroids are adjuncts."
+    "q": "Best initial test in suspected Cushing’s syndrome?",
+    "options": ["Dexamethasone suppression test", "ACTH stimulation test", "Random cortisol", "MRI brain"],
+    "answer": 0,
+    "explanation": "Low-dose dexamethasone suppression test is the initial screening."
   },
   {
-    "q": "In suspected infective endocarditis, key step before starting empiric antibiotics:",
-    "options": ["Immediate antibiotics", "Obtain three sets of blood cultures", "Immediate transesophageal echo", "Start anticoagulation"],
-    "answer": 1,
-    "explanation": "Multiple blood cultures drawn before antibiotics maximize microbiologic yield."
+    "q": "Drug of choice for acute severe asthma?",
+    "options": ["Ipratropium", "IV steroids", "Nebulized salbutamol", "Montelukast"],
+    "answer": 2,
+    "explanation": "Short-acting beta agonists (salbutamol) are first-line."
   },
   {
-    "q": "Most appropriate initial screening test for hypothyroidism:",
-    "options": ["Free T4", "TSH", "Total T3", "TRH stimulation test"],
+    "q": "Most common cause of secondary hypertension?",
+    "options": ["Pheochromocytoma", "Renal artery stenosis", "Cushing’s syndrome", "Hyperaldosteronism"],
     "answer": 1,
-    "explanation": "TSH is the best initial test; free T4 helps confirm and grade severity."
+    "explanation": "Renovascular disease is the most common cause."
+  },
+  {
+    "q": "Screening test of choice for HIV?",
+    "options": ["Western blot", "ELISA", "PCR", "CD4 count"],
+    "answer": 1,
+    "explanation": "ELISA is used for initial screening; Western blot confirms."
+  },
+  {
+    "q": "Best initial investigation for suspected pulmonary embolism in stable patient?",
+    "options": ["D-dimer", "CT pulmonary angiography", "V/Q scan", "Doppler legs"],
+    "answer": 1,
+    "explanation": "CT pulmonary angiography is the diagnostic test of choice in stable patients."
+  },
+  {
+    "q": "Treatment of choice for organophosphorus poisoning?",
+    "options": ["Atropine + Pralidoxime", "Neostigmine", "Diazepam", "Naloxone"],
+    "answer": 0,
+    "explanation": "Atropine relieves muscarinic effects; pralidoxime regenerates cholinesterase."
+  },
+  {
+    "q": "First-line drug for absence seizures?",
+    "options": ["Phenytoin", "Valproate", "Carbamazepine", "Ethosuximide"],
+    "answer": 3,
+    "explanation": "Ethosuximide is drug of choice for absence seizures."
+  },
+  {
+    "q": "Most common cause of upper GI bleeding?",
+    "options": ["Mallory-Weiss tear", "Gastric ulcer", "Esophageal varices", "Duodenal ulcer"],
+    "answer": 3,
+    "explanation": "Duodenal ulcer is the most common cause of UGIB."
+  },
+  {
+    "q": "First drug given in anaphylaxis?",
+    "options": ["Hydrocortisone", "Adrenaline (epinephrine)", "Chlorpheniramine", "Oxygen"],
+    "answer": 1,
+    "explanation": "IM adrenaline is the life-saving first step."
+  },
+  {
+    "q": "Most common cause of chronic liver disease in India?",
+    "options": ["Alcohol", "NAFLD", "Hepatitis B", "Hepatitis C"],
+    "answer": 2,
+    "explanation": "Chronic HBV infection remains a leading cause in India."
+  },
+  {
+    "q": "Best marker for long-term glycemic control in diabetes?",
+    "options": ["Fasting glucose", "HbA1c", "Postprandial glucose", "Fructosamine"],
+    "answer": 1,
+    "explanation": "HbA1c reflects average blood sugar over 8–12 weeks."
+  },
+  {
+    "q": "Triad of Addison’s disease?",
+    "options": ["Hypoglycemia, Hyperkalemia, Hyponatremia", "Hypoglycemia, Hypokalemia, Hypernatremia", "Hypertension, Hypokalemia, Hypernatremia", "Hypertension, Hyperkalemia, Hyponatremia"],
+    "answer": 0,
+    "explanation": "Primary adrenal insufficiency → cortisol and aldosterone deficiency."
+  },
+  {
+    "q": "Drug of choice for multi-drug resistant tuberculosis (MDR-TB)?",
+    "options": ["Rifampicin", "Isoniazid", "Levofloxacin", "Streptomycin"],
+    "answer": 2,
+    "explanation": "Fluoroquinolones like levofloxacin are main drugs in MDR-TB regimens."
+  },
+  {
+    "q": "Earliest feature of diabetic nephropathy?",
+    "options": ["Overt proteinuria", "Microalbuminuria", "Decreased GFR", "Hypertension"],
+    "answer": 1,
+    "explanation": "Microalbuminuria is the earliest detectable abnormality."
   }
 ]
+  {
+    "q": "Most common cause of subarachnoid hemorrhage?",
+    "options": ["Hypertension", "Berry aneurysm rupture", "AV malformation", "Trauma"],
+    "answer": 1,
+    "explanation": "Rupture of berry aneurysm is the most common non-traumatic cause of SAH."
+  },
+  {
+    "q": "First-line drug for prophylaxis of migraine?",
+    "options": ["Sumatriptan", "Propranolol", "Ergotamine", "Flunarizine"],
+    "answer": 1,
+    "explanation": "Beta-blockers like propranolol are commonly used for prophylaxis."
+  },
+  {
+    "q": "Which arrhythmia is most commonly associated with hyperthyroidism?",
+    "options": ["Atrial fibrillation", "Ventricular tachycardia", "AV block", "Supraventricular tachycardia"],
+    "answer": 0,
+    "explanation": "Thyrotoxicosis is strongly linked with atrial fibrillation."
+  },
+  {
+    "q": "Best initial investigation for suspected multiple sclerosis?",
+    "options": ["CSF analysis", "MRI brain and spine", "Visual evoked potentials", "CT scan"],
+    "answer": 1,
+    "explanation": "MRI is the most sensitive test for demyelinating plaques."
+  },
+  {
+    "q": "Which electrolyte abnormality is seen with amphotericin B therapy?",
+    "options": ["Hyperkalemia", "Hypokalemia & Hypomagnesemia", "Hyponatremia", "Hypercalcemia"],
+    "answer": 1,
+    "explanation": "Amphotericin B commonly causes hypokalemia and hypomagnesemia."
+  },
+  {
+    "q": "Treatment of choice for Wilson’s disease?",
+    "options": ["Zinc", "Penicillamine", "Trientine", "Prednisolone"],
+    "answer": 1,
+    "explanation": "Penicillamine is a copper chelator and first-line treatment."
+  },
+  {
+    "q": "Most common cause of heart failure with preserved ejection fraction (HFpEF)?",
+    "options": ["Hypertension", "Ischemic heart disease", "Valvular disease", "Cardiomyopathy"],
+    "answer": 0,
+    "explanation": "Hypertension-induced LV hypertrophy is the leading cause."
+  },
+  {
+    "q": "Classic triad of TTP (Thrombotic Thrombocytopenic Purpura) includes?",
+    "options": ["Fever, Renal failure, Anemia", "Thrombocytopenia, Microangiopathic hemolysis, Neurologic symptoms", "Bleeding, Splenomegaly, Anemia", "Fever, Hepatomegaly, Jaundice"],
+    "answer": 1,
+    "explanation": "TTP presents with thrombocytopenia, hemolytic anemia, and neurologic signs (plus fever & renal failure in pentad)."
+  },
+  {
+    "q": "Best test for diagnosing HIV in newborn?",
+    "options": ["ELISA", "Western blot", "PCR for HIV DNA", "CD4 count"],
+    "answer": 2,
+    "explanation": "PCR detects viral genome; maternal antibodies make ELISA unreliable in infants."
+  },
+  {
+    "q": "Which of the following causes Conn’s syndrome?",
+    "options": ["Adrenal adenoma", "Adrenal carcinoma", "Renal artery stenosis", "Pituitary adenoma"],
+    "answer": 0,
+    "explanation": "Conn’s syndrome = primary hyperaldosteronism, most often due to adrenal adenoma."
+  },
+  {
+    "q": "Best diagnostic test for celiac disease?",
+    "options": ["Anti-tTG antibody", "Anti-endomysial antibody", "Jejunal biopsy", "Anti-gliadin antibody"],
+    "answer": 2,
+    "explanation": "Jejunal biopsy showing villous atrophy confirms diagnosis."
+  },
+  {
+    "q": "Best treatment for stable angina?",
+    "options": ["Sublingual nitrates", "Aspirin", "Beta-blockers", "Calcium channel blockers"],
+    "answer": 2,
+    "explanation": "Beta-blockers reduce mortality and are first-line in chronic stable angina."
+  },
+  {
+    "q": "Which of the following is a side effect of amiodarone?",
+    "options": ["Hyperthyroidism or hypothyroidism", "Hypoglycemia", "Renal failure", "Hearing loss"],
+    "answer": 0,
+    "explanation": "Amiodarone contains iodine and may cause thyroid dysfunction."
+  },
+  {
+    "q": "Which vitamin deficiency causes pellagra?",
+    "options": ["Niacin (B3)", "Riboflavin (B2)", "Thiamine (B1)", "Pyridoxine (B6)"],
+    "answer": 0,
+    "explanation": "Niacin deficiency causes dermatitis, diarrhea, dementia."
+  },
+  {
+    "q": "Most common cause of infective endocarditis?",
+    "options": ["Staphylococcus aureus", "Viridans streptococci", "Enterococci", "Fungal"],
+    "answer": 1,
+    "explanation": "Viridans streptococci are most common in subacute IE; Staph aureus in IV drug users."
+  },
+  {
+    "q": "Which drug causes red man syndrome?",
+    "options": ["Penicillin", "Vancomycin", "Linezolid", "Ciprofloxacin"],
+    "answer": 1,
+    "explanation": "Rapid infusion of vancomycin causes histamine release → red man syndrome."
+  },
+  {
+    "q": "In nephrotic syndrome, the most common complication is?",
+    "options": ["Hypertension", "Hypothyroidism", "Thrombosis", "Hypokalemia"],
+    "answer": 2,
+    "explanation": "Loss of antithrombin III in urine predisposes to thrombosis."
+  },
+  {
+    "q": "Which of the following is NOT a feature of nephritic syndrome?",
+    "options": ["Hematuria", "Hypertension", "Proteinuria > 3.5g/day", "Oliguria"],
+    "answer": 2,
+    "explanation": "Nephritic = hematuria, HTN, oliguria, mild proteinuria; nephrotic = heavy proteinuria."
+  },
+  {
+    "q": "Best drug for prophylaxis of meningococcal meningitis?",
+    "options": ["Penicillin", "Rifampicin", "Ceftriaxone", "Ciprofloxacin"],
+    "answer": 1,
+    "explanation": "Rifampicin is the drug of choice for close contacts."
+  },
+  {
+    "q": "Earliest clinical manifestation of systemic sclerosis?",
+    "options": ["Renal crisis", "Pulmonary fibrosis", "Raynaud’s phenomenon", "Skin tightening"],
+    "answer": 2,
+    "explanation": "Raynaud’s phenomenon usually precedes other features."
+  }
+  {
+    "q": "Which is the most common cause of chronic liver disease in India?",
+    "options": ["Alcohol", "Hepatitis B", "Hepatitis C", "NAFLD"],
+    "answer": 1,
+    "explanation": "In India, chronic Hepatitis B infection remains the most common cause."
+  },
+  {
+    "q": "Which investigation is most sensitive for early diabetic nephropathy?",
+    "options": ["Serum creatinine", "Microalbuminuria", "Ultrasound KUB", "Urine routine"],
+    "answer": 1,
+    "explanation": "Microalbuminuria is the earliest marker of diabetic nephropathy."
+  },
+  {
+    "q": "What is the drug of choice in absence seizures?",
+    "options": ["Valproate", "Phenytoin", "Ethosuximide", "Carbamazepine"],
+    "answer": 2,
+    "explanation": "Ethosuximide is the first-line therapy for absence seizures."
+  },
+  {
+    "q": "Most common cause of community acquired pneumonia?",
+    "options": ["Streptococcus pneumoniae", "Klebsiella pneumoniae", "Staphylococcus aureus", "Mycoplasma pneumoniae"],
+    "answer": 0,
+    "explanation": "Streptococcus pneumoniae is the leading cause of community acquired pneumonia."
+  },
+  {
+    "q": "Kayser-Fleischer rings are seen in?",
+    "options": ["Hemochromatosis", "Wilson’s disease", "Chronic hepatitis", "Primary biliary cirrhosis"],
+    "answer": 1,
+    "explanation": "They are due to copper deposition in Descemet’s membrane of cornea in Wilson’s disease."
+  },
+  {
+    "q": "Most common cardiac complication of diphtheria?",
+    "options": ["Endocarditis", "Myocarditis", "Pericarditis", "Arrhythmia"],
+    "answer": 1,
+    "explanation": "Myocarditis is the most feared and common cardiac complication."
+  },
+  {
+    "q": "Which tumor marker is elevated in hepatocellular carcinoma?",
+    "options": ["CEA", "AFP", "CA-125", "CA-19-9"],
+    "answer": 1,
+    "explanation": "Alpha fetoprotein (AFP) is the marker for HCC."
+  },
+  {
+    "q": "Best treatment for acute gout?",
+    "options": ["Allopurinol", "Colchicine", "Probenecid", "Febuxostat"],
+    "answer": 1,
+    "explanation": "Colchicine or NSAIDs are used in acute gout; allopurinol is not used in acute attack."
+  },
+  {
+    "q": "Which electrolyte disturbance is caused by thiazide diuretics?",
+    "options": ["Hyperkalemia", "Hypokalemia", "Hypernatremia", "Hypermagnesemia"],
+    "answer": 1,
+    "explanation": "Thiazides cause hypokalemia, hyponatremia, hyperuricemia, and hypercalcemia."
+  },
+  {
+    "q": "What is the most common cause of secondary hypertension?",
+    "options": ["Renal artery stenosis", "Pheochromocytoma", "Cushing’s syndrome", "Coarctation of aorta"],
+    "answer": 0,
+    "explanation": "Renovascular disease is the most common cause of secondary hypertension."
+  },
+  {
+    "q": "The antidote for organophosphorus poisoning is?",
+    "options": ["Atropine + Pralidoxime", "Naloxone", "Flumazenil", "Hydroxocobalamin"],
+    "answer": 0,
+    "explanation": "Atropine for muscarinic symptoms, Pralidoxime reactivates acetylcholinesterase."
+  },
+  {
+    "q": "Which is the most common type of renal stone?",
+    "options": ["Uric acid", "Struvite", "Calcium oxalate", "Cystine"],
+    "answer": 2,
+    "explanation": "Calcium oxalate stones are the most frequent renal calculi."
+  },
+  {
+    "q": "Which drug causes gingival hyperplasia?",
+    "options": ["Phenytoin", "Valproate", "Levetiracetam", "Phenobarbital"],
+    "answer": 0,
+    "explanation": "Phenytoin causes gingival hyperplasia and hirsutism."
+  },
+  {
+    "q": "What is the most common opportunistic infection in HIV?",
+    "options": ["CMV retinitis", "Candidiasis", "Pneumocystis pneumonia", "Toxoplasmosis"],
+    "answer": 2,
+    "explanation": "Pneumocystis jirovecii pneumonia is the most common OI in HIV."
+  },
+  {
+    "q": "Drug of choice for ventricular tachycardia?",
+    "options": ["Amiodarone", "Digoxin", "Adenosine", "Verapamil"],
+    "answer": 0,
+    "explanation": "Amiodarone or lidocaine are preferred for VT."
+  },
+  {
+    "q": "Which vitamin deficiency causes megaloblastic anemia?",
+    "options": ["Vitamin B12", "Folic acid", "Both B12 and Folate", "Vitamin B6"],
+    "answer": 2,
+    "explanation": "Both folate and B12 deficiencies cause megaloblastic anemia."
+  },
+  {
+    "q": "Which infection is associated with cold agglutinins?",
+    "options": ["Mycoplasma pneumonia", "Influenza", "EBV", "CMV"],
+    "answer": 0,
+    "explanation": "Mycoplasma pneumoniae infection is associated with cold agglutinins."
+  },
+  {
+    "q": "What is the drug of choice in hypertensive emergency with aortic dissection?",
+    "options": ["Sodium nitroprusside", "Labetalol", "Hydralazine", "Clonidine"],
+    "answer": 1,
+    "explanation": "Labetalol (combined alpha and beta blocker) is ideal for aortic dissection."
+  },
+  {
+    "q": "Earliest ECG change in hyperkalemia?",
+    "options": ["Broad QRS", "Tall T waves", "Loss of P waves", "Sine wave pattern"],
+    "answer": 1,
+    "explanation": "Tall peaked T waves are the earliest sign of hyperkalemia."
+  },
+  {
+    "q": "Which drug is contraindicated in asthma?",
+    "options": ["Beta blockers", "Inhaled steroids", "Montelukast", "Theophylline"],
+    "answer": 0,
+    "explanation": "Non-selective beta blockers can precipitate bronchospasm."
+  }
+  {
+    "q": "What is the most common cause of subarachnoid hemorrhage?",
+    "options": ["Trauma", "Berry aneurysm rupture", "AV malformation", "Hypertension"],
+    "answer": 1,
+    "explanation": "Rupture of berry aneurysm at the circle of Willis is the commonest cause."
+  },
+  {
+    "q": "Most common heart disease in pregnancy is?",
+    "options": ["ASD", "VSD", "Mitral stenosis", "PDA"],
+    "answer": 2,
+    "explanation": "Rheumatic mitral stenosis is the most common heart disease in Indian pregnant women."
+  },
+  {
+    "q": "The earliest feature of Parkinson’s disease?",
+    "options": ["Resting tremor", "Rigidity", "Postural instability", "Bradykinesia"],
+    "answer": 3,
+    "explanation": "Bradykinesia is usually the earliest symptom."
+  },
+  {
+    "q": "The drug of choice for trigeminal neuralgia?",
+    "options": ["Phenytoin", "Carbamazepine", "Gabapentin", "Amitriptyline"],
+    "answer": 1,
+    "explanation": "Carbamazepine is the first-line treatment for trigeminal neuralgia."
+  },
+  {
+    "q": "Which hepatitis virus is DNA virus?",
+    "options": ["Hepatitis A", "Hepatitis B", "Hepatitis C", "Hepatitis E"],
+    "answer": 1,
+    "explanation": "Hepatitis B virus is a DNA virus, unlike the others which are RNA viruses."
+  },
+  {
+    "q": "The most common cause of recurrent oral ulcers?",
+    "options": ["Behcet’s disease", "Aphthous ulcer", "Herpes simplex", "Lichen planus"],
+    "answer": 1,
+    "explanation": "Recurrent aphthous ulcers are the most common cause."
+  },
+  {
+    "q": "Which drug is used in prophylaxis of migraine?",
+    "options": ["Sumatriptan", "Propranolol", "Ergotamine", "Paracetamol"],
+    "answer": 1,
+    "explanation": "Propranolol is commonly used for migraine prophylaxis."
+  },
+  {
+    "q": "Most common cause of meningitis in adults?",
+    "options": ["H. influenzae", "Streptococcus pneumoniae", "Listeria monocytogenes", "E. coli"],
+    "answer": 1,
+    "explanation": "Streptococcus pneumoniae is the most common bacterial cause of meningitis in adults."
+  },
+  {
+    "q": "Which electrolyte abnormality is seen with amphotericin B?",
+    "options": ["Hyperkalemia", "Hypokalemia", "Hypernatremia", "Hypermagnesemia"],
+    "answer": 1,
+    "explanation": "Amphotericin B causes renal potassium and magnesium wasting leading to hypokalemia."
+  },
+  {
+    "q": "Drug of choice for prophylaxis of rheumatic fever?",
+    "options": ["Ceftriaxone", "Penicillin", "Azithromycin", "Doxycycline"],
+    "answer": 1,
+    "explanation": "Benzathine penicillin is used every 3–4 weeks for prophylaxis."
+  },
+  {
+    "q": "What is the most common cause of constrictive pericarditis in India?",
+    "options": ["Viral infection", "Tuberculosis", "Radiation", "Idiopathic"],
+    "answer": 1,
+    "explanation": "Tuberculosis is the leading cause of constrictive pericarditis in India."
+  },
+  {
+    "q": "The drug of choice for pheochromocytoma pre-op preparation?",
+    "options": ["Beta blockers", "Phenoxybenzamine", "Esmolol", "Hydralazine"],
+    "answer": 1,
+    "explanation": "Phenoxybenzamine (alpha blocker) is given before surgery to prevent hypertensive crisis."
+  },
+  {
+    "q": "Most common opportunistic fungal infection in diabetics?",
+    "options": ["Candida", "Mucormycosis", "Aspergillus", "Cryptococcus"],
+    "answer": 1,
+    "explanation": "Mucormycosis is commonly seen in uncontrolled diabetics, especially with ketoacidosis."
+  },
+  {
+    "q": "The gold standard test for diagnosis of GERD?",
+    "options": ["Endoscopy", "pH monitoring", "Barium swallow", "Manometry"],
+    "answer": 1,
+    "explanation": "24-hour pH monitoring is the gold standard for GERD."
+  },
+  {
+    "q": "Which vitamin deficiency causes night blindness?",
+    "options": ["Vitamin A", "Vitamin B1", "Vitamin D", "Vitamin E"],
+    "answer": 0,
+    "explanation": "Vitamin A deficiency leads to night blindness and xerophthalmia."
+  },
+  {
+    "q": "Earliest renal change in diabetes mellitus?",
+    "options": ["Proteinuria", "Microalbuminuria", "Glomerulosclerosis", "Decreased GFR"],
+    "answer": 1,
+    "explanation": "Microalbuminuria is the earliest renal manifestation."
+  },
+  {
+    "q": "What is the most common cause of massive hemoptysis?",
+    "options": ["Bronchiectasis", "TB", "Lung cancer", "Mitral stenosis"],
+    "answer": 0,
+    "explanation": "Bronchiectasis is the most common cause of massive hemoptysis worldwide."
+  },
+  {
+    "q": "Which hormone is increased in pheochromocytoma?",
+    "options": ["Cortisol", "Aldosterone", "Catecholamines", "ADH"],
+    "answer": 2,
+    "explanation": "Catecholamines (epinephrine and norepinephrine) are elevated in pheochromocytoma."
+  },
+  {
+    "q": "Drug of choice for status epilepticus?",
+    "options": ["Phenytoin", "Diazepam", "Lorazepam", "Phenobarbital"],
+    "answer": 2,
+    "explanation": "Lorazepam is preferred for initial management of status epilepticus."
+  },
+  {
+    "q": "Most common cause of Addison’s disease worldwide?",
+    "options": ["Tuberculosis", "Autoimmune", "Metastasis", "Fungal infection"],
+    "answer": 0,
+    "explanation": "TB is the leading cause of Addison’s disease in developing countries."
+  }
+  {
+    "q": "Most common cause of community-acquired pneumonia?",
+    "options": ["Klebsiella", "Streptococcus pneumoniae", "Mycoplasma pneumoniae", "Legionella"],
+    "answer": 1,
+    "explanation": "Streptococcus pneumoniae is the most common cause of community-acquired pneumonia."
+  },
+  {
+    "q": "Which autoantibody is most specific for SLE?",
+    "options": ["ANA", "Anti-dsDNA", "Anti-Smith", "Anti-histone"],
+    "answer": 2,
+    "explanation": "Anti-Smith antibody is highly specific for systemic lupus erythematosus."
+  },
+  {
+    "q": "Most common cause of chronic pancreatitis in India?",
+    "options": ["Alcohol", "Idiopathic", "Tropical pancreatitis", "Gallstones"],
+    "answer": 2,
+    "explanation": "Tropical pancreatitis is common in India, often related to malnutrition and cassava diet."
+  },
+  {
+    "q": "Which is the earliest cardiac marker to rise after MI?",
+    "options": ["Troponin I", "Troponin T", "CK-MB", "Myoglobin"],
+    "answer": 3,
+    "explanation": "Myoglobin rises earliest (within 1–3 hours) but is nonspecific."
+  },
+  {
+    "q": "Drug of choice for prophylaxis of cluster headache?",
+    "options": ["Sumatriptan", "Verapamil", "Lithium", "Prednisolone"],
+    "answer": 1,
+    "explanation": "Verapamil is the most effective prophylactic drug for cluster headaches."
+  },
+  {
+    "q": "Most common cause of secondary hypertension?",
+    "options": ["Cushing’s syndrome", "Renal artery stenosis", "Pheochromocytoma", "Coarctation of aorta"],
+    "answer": 1,
+    "explanation": "Renal parenchymal disease and renal artery stenosis are the most common causes."
+  },
+  {
+    "q": "Most common cause of meningitis in neonates?",
+    "options": ["Listeria", "E. coli", "Group B Streptococcus", "Klebsiella"],
+    "answer": 2,
+    "explanation": "Group B Streptococcus is the most frequent cause in neonates."
+  },
+  {
+    "q": "The triad of myasthenia gravis includes?",
+    "options": ["Ptosis, diplopia, muscle weakness", "Tremor, rigidity, bradykinesia", "Fever, sore throat, lymphadenopathy", "Polyuria, polydipsia, weight loss"],
+    "answer": 0,
+    "explanation": "Myasthenia gravis typically presents with ptosis, diplopia, and generalized muscle weakness."
+  },
+  {
+    "q": "What is the most common cause of cor pulmonale?",
+    "options": ["Asthma", "COPD", "Pulmonary embolism", "Pneumonia"],
+    "answer": 1,
+    "explanation": "Chronic obstructive pulmonary disease (COPD) is the most frequent cause."
+  },
+  {
+    "q": "The most common arrhythmia seen in hyperthyroidism?",
+    "options": ["Atrial flutter", "Atrial fibrillation", "Ventricular tachycardia", "Sinus bradycardia"],
+    "answer": 1,
+    "explanation": "Atrial fibrillation is the most common arrhythmia associated with thyrotoxicosis."
+  },
+  {
+    "q": "The drug of choice for absence seizures?",
+    "options": ["Carbamazepine", "Phenytoin", "Ethosuximide", "Valproate"],
+    "answer": 2,
+    "explanation": "Ethosuximide is the preferred drug for typical absence seizures."
+  },
+  {
+    "q": "Which electrolyte abnormality causes Trousseau’s sign?",
+    "options": ["Hypokalemia", "Hyperkalemia", "Hypocalcemia", "Hypercalcemia"],
+    "answer": 2,
+    "explanation": "Hypocalcemia leads to neuromuscular irritability causing Trousseau’s and Chvostek’s signs."
+  },
+  {
+    "q": "Which is the gold standard investigation for tuberculosis meningitis?",
+    "options": ["CT scan", "MRI", "CSF culture for AFB", "CSF PCR"],
+    "answer": 2,
+    "explanation": "CSF culture for AFB is the gold standard, though PCR gives faster results."
+  },
+  {
+    "q": "Most common site of berry aneurysm?",
+    "options": ["ACA–ACoA junction", "MCA bifurcation", "PCA origin", "Basilar tip"],
+    "answer": 0,
+    "explanation": "Anterior communicating artery junction is the most frequent site of berry aneurysms."
+  },
+  {
+    "q": "Which vitamin deficiency causes pellagra?",
+    "options": ["Vitamin B1", "Vitamin B3", "Vitamin B6", "Vitamin B12"],
+    "answer": 1,
+    "explanation": "Niacin (B3) deficiency causes pellagra with dermatitis, diarrhea, and dementia."
+  },
+  {
+    "q": "Which antibody is seen in celiac disease?",
+    "options": ["Anti-dsDNA", "Anti-endomysial", "Anti-mitochondrial", "Anti-centromere"],
+    "answer": 1,
+    "explanation": "Anti-endomysial and anti-tTG antibodies are specific for celiac disease."
+  },
+  {
+    "q": "Most common cause of infective endocarditis overall?",
+    "options": ["Streptococcus viridans", "Staphylococcus aureus", "Enterococcus", "Candida"],
+    "answer": 0,
+    "explanation": "Streptococcus viridans is the most common cause of native valve endocarditis."
+  },
+  {
+    "q": "Which is the antidote for methanol poisoning?",
+    "options": ["Naloxone", "Ethanol", "Flumazenil", "Atropine"],
+    "answer": 1,
+    "explanation": "Ethanol (or fomepizole) is used to competitively inhibit alcohol dehydrogenase."
+  },
+  {
+    "q": "Most common cause of upper GI bleeding?",
+    "options": ["Esophageal varices", "Peptic ulcer disease", "Mallory–Weiss tear", "Gastric cancer"],
+    "answer": 1,
+    "explanation": "Peptic ulcer disease is the leading cause of upper gastrointestinal bleeding."
+  },
+  {
+    "q": "Earliest sign of diabetic retinopathy?",
+    "options": ["Cotton wool spots", "Neovascularization", "Microaneurysms", "Exudates"],
+    "answer": 2,
+    "explanation": "Microaneurysms are the earliest ophthalmoscopic finding."
+  }
