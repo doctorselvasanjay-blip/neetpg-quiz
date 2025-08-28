@@ -1,0 +1,62 @@
+[
+  {
+    "q": "Most common cause of community-acquired pneumonia in immunocompetent adults?",
+    "options": ["Streptococcus pneumoniae", "Klebsiella pneumoniae", "Mycoplasma pneumoniae", "Staphylococcus aureus"],
+    "answer": 0,
+    "explanation": "Streptococcus pneumoniae remains the leading cause of CAP in otherwise healthy adults."
+  },
+  {
+    "q": "Best initial management step in diabetic ketoacidosis (DKA)?",
+    "options": ["Start IV insulin bolus immediately", "Rapid IV isotonic saline infusion", "Give sodium bicarbonate routinely", "Start potassium infusion immediately"],
+    "answer": 1,
+    "explanation": "Volume resuscitation with isotonic saline is the first step; insulin and potassium are added after labs and partial fluid replacement."
+  },
+  {
+    "q": "Earliest ECG change in hyperkalemia is typically:",
+    "options": ["Tall peaked T waves", "Widened QRS", "Prolonged PR interval", "Flattened P waves"],
+    "answer": 0,
+    "explanation": "Tall, peaked T waves usually appear first as serum potassium rises."
+  },
+  {
+    "q": "Which therapy improves survival in HFrEF (reduced EF)?",
+    "options": ["Loop diuretics", "ACE inhibitor or ARNI", "Nitrates alone", "Digoxin"],
+    "answer": 1,
+    "explanation": "ACE inhibitors (or ARNI), evidence-based beta-blockers, and MRAs improve survival; loop diuretics and digoxin mainly relieve symptoms."
+  },
+  {
+    "q": "Best reperfusion strategy for a STEMI patient at a PCI-capable center within guideline time windows:",
+    "options": ["Thrombolysis", "Primary PCI", "CABG", "Medical therapy only"],
+    "answer": 1,
+    "explanation": "Primary percutaneous coronary intervention within door-to-balloon time offers superior outcomes when rapidly available."
+  },
+  {
+    "q": "Most specific serologic test for rheumatoid arthritis:",
+    "options": ["Rheumatoid factor", "Anti-CCP antibodies", "ANA", "ESR"],
+    "answer": 1,
+    "explanation": "Anti-cyclic citrullinated peptide (anti-CCP) antibodies have high specificity for RA."
+  },
+  {
+    "q": "Nephrotic syndrome is defined by daily proteinuria greater than:",
+    "options": ["300 mg", "1 g", "3.5 g", "10 g"],
+    "answer": 2,
+    "explanation": "Nephrotic-range proteinuria is >3.5 g/day, typically with hypoalbuminemia and edema."
+  },
+  {
+    "q": "First-line bronchodilator in an acute severe asthma exacerbation:",
+    "options": ["Ipratropium alone", "Nebulized salbutamol (albuterol)", "Theophylline infusion", "Montelukast"],
+    "answer": 1,
+    "explanation": "Short-acting beta-2 agonists are first-line; ipratropium and systemic steroids are adjuncts."
+  },
+  {
+    "q": "In suspected infective endocarditis, key step before starting empiric antibiotics:",
+    "options": ["Immediate antibiotics", "Obtain three sets of blood cultures", "Immediate transesophageal echo", "Start anticoagulation"],
+    "answer": 1,
+    "explanation": "Multiple blood cultures drawn before antibiotics maximize microbiologic yield."
+  },
+  {
+    "q": "Most appropriate initial screening test for hypothyroidism:",
+    "options": ["Free T4", "TSH", "Total T3", "TRH stimulation test"],
+    "answer": 1,
+    "explanation": "TSH is the best initial test; free T4 helps confirm and grade severity."
+  }
+]
